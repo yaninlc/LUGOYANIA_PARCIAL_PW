@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Menú de navegación -->
     <header>
         <nav>
             <ul>
@@ -17,12 +19,14 @@
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Sección principal -->
     <main>
         <section class="bienvenida">
             <h1>Bienvenido a la página oficial de Kim Ye-Ji</h1>
             <p>Descubre su carrera profesional, galería de imágenes, y más.</p>
 
+            <!-- Botones Animados -->
             <div class="botones-animados">
                 <button class="boton" onclick="location.href='perfil.html'">Perfil Profesional</button>
                 <button class="boton" onclick="location.href='galeria.html'">Galería de Imágenes</button>
@@ -31,6 +35,7 @@
                 <button class="boton" onclick="location.href='cv.html'">Currículum</button>
             </div>
 
+            <!-- Descripción de las Páginas -->
             <section class="descripcion">
                 <h2>Acerca de las Páginas:</h2>
                 <p><strong>Perfil Profesional:</strong> Conoce más sobre la carrera de Kim Ye-Ji y sus logros en el mundo del deporte.</p>
@@ -40,11 +45,37 @@
                 <p><strong>Currículum:</strong> Consulta el currículum completo de Kim Ye-Ji, disponible en formato PDF.</p>
             </section>
         </section>
+        
+        <!-- Botón Cambiante -->
+        <button class="boton-cambiable" onclick="cambiarBoton()">Haz clic aquí</button>
+
+        <!-- Caja con Ciclo de Colores -->
+        <div class="caja-colores"></div>
+
+        <!-- Texto Rotativo -->
+        <h2 class="texto-rotativo">Texto en Rotación</h2>
+
+        <!-- Caja con Hover -->
+        <div class="cuadro-tamano"></div>
+
+        <!-- Texto con Velocidad Variable -->
+        <p class="texto-velocidad">Texto con velocidad variable</p>
     </main>
-    
+
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Yanina Lugo</p>
         <p>Fecha de creación: Noviembre 2024</p>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Función para cambiar el botón al hacer clic
+        function cambiarBoton() {
+            var boton = document.querySelector('.boton-cambiable');
+            boton.classList.toggle('clicked');
+        }
+    </script>
+
 </body>
 </html>
