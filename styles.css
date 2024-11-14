@@ -1,178 +1,168 @@
-/* General */
+/* Centrar todo el contenido del body */
 body {
     font-family: Arial, sans-serif;
+    text-align: center; /* Centra el texto en el body */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-/* Menú de navegación */
+/* Centrar el encabezado */
 header {
     background-color: #333;
+    color: white;
     padding: 10px 0;
+    text-align: center; /* Centra los elementos dentro del encabezado */
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+header nav ul li {
+    display: inline-block;
+    margin-right: 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #e1b1cd;
-}
-
-/* Botones Animados */
-.boton {
-    background-color: #d02d79;
-    color: white;
-    padding: 10px 20px;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    margin: 10px;
 }
 
-.boton:hover {
-    background-color: #a91e56;
-    transform: scale(1.1);
+/* Centrar la sección principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido del main */
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Botón Cambiante */
-.boton-cambiable {
-    background-color: #d02d79;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s ease;
+.bienvenida {
+    margin-bottom: 30px;
 }
 
-.boton-cambiable.clicked {
-    background-color: #a91e56;
-    transform: scale(1.2);
+/* Título giratorio centrado */
+.titulo-giratorio {
+    font-size: 2.5em;
+    animation: girar 5s linear infinite;
 }
 
-/* Animación de Ciclo de Colores */
-.caja-colores {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    animation: cambioColores 5s infinite;
-    margin: 20px auto;
-}
-
-@keyframes cambioColores {
-    0% { background-color: red; }
-    50% { background-color: yellow; }
-    100% { background-color: blue; }
-}
-
-/* Texto Rotativo */
-.texto-rotativo {
-    display: inline-block;
-    font-size: 24px;
-    animation: rotar 4s linear infinite;
-    margin: 20px auto;
-}
-
-@keyframes rotar {
+/* Animación para el título giratorio */
+@keyframes girar {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Cambio de Tamaño con Hover */
-.cuadro-tamano {
-    width: 200px;
-    height: 200px;
-    background-color: #4CAF50;
-    transition: transform 0.3s ease;
-    margin: 20px auto;
+/* Centrado de los botones animados */
+.botones-animados {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
-
-.cuadro-tamano:hover {
-    transform: scale(1.2);
-}
-
-/* Velocidad de Animación Variable */
-.texto-velocidad {
-    display: inline-block;
-    font-size: 24px;
-    animation: moverTexto 6s ease-in-out infinite;
-    margin: 20px auto;
-}
-
-@keyframes moverTexto {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(300px); }
-    100% { transform: translateX(0); }
-}
-
 
 .boton {
-    background-color: #d02d79; /* Rosa fuerte */
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .boton:hover {
-    transform: scale(1.1);
-    background-color: #e1b1cd; /* Rosa claro */
+    background-color: #45a049;
 }
 
-.boton:active {
-    transform: scale(1);
-}
-
-/* Descripción de las otras páginas */
+/* Sección de descripción */
 .descripcion {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: left;
-    width: 80%;
-    margin: 40px auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.descripcion h2 {
-    color: #d02d79; /* Rosa fuerte */
-    margin-bottom: 20px;
+/* Botón cambiable */
+.boton-cambiable {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.descripcion p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
+.boton-cambiable.clicked {
+    background-color: #0056b3; /* Cambia el color al hacer clic */
+}
+
+/* Caja de colores que cambia */
+.caja-colores {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, red, blue, green, yellow);
+    animation: ciclo-colores 5s infinite;
+    margin: 20px auto;
+}
+
+@keyframes ciclo-colores {
+    0% { background: red; }
+    25% { background: blue; }
+    50% { background: green; }
+    75% { background: yellow; }
+    100% { background: red; }
+}
+
+/* Texto rotativo */
+.texto-rotativo {
+    font-size: 2em;
+    animation: rotar-texto 5s linear infinite;
+}
+
+@keyframes rotar-texto {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Caja con hover */
+.cuadro-tamano {
+    width: 200px;
+    height: 200px;
+    background-color: #ff5722;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cuadro-tamano:hover {
+    transform: scale(1.1); /* Aumenta el tamaño cuando el cursor pasa por encima */
+}
+
+/* Texto con velocidad variable */
+.texto-velocidad {
+    font-size: 1.5em;
+    animation: velocidad-texto 3s ease-in-out infinite;
+}
+
+@keyframes velocidad-texto {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 /* Pie de página */
 footer {
-    background-color: #d2a8e4; /* Rosa suave */
-    padding: 20px 0;
-    text-align: center;
+    background-color: #333;
     color: white;
-    font-size: 1rem;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
+
 /* Reset de márgenes y padding */
 * {
     margin: 0;
