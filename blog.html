@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Profesional - Kim Ye-Ji</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculando el archivo CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.0/scrollreveal.min.js"></script> <!-- Biblioteca para animación -->
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil Profesional</a></li>
+                <li><a href="galeria.html">Galería de Imágenes</a></li>
+                <li><a href="blog.html">Blog Profesional</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog">
+            <h1>Blog Profesional</h1>
+
+            <!-- Primer paso: Inicios de la carrera -->
+            <article class="paso" id="paso1">
+                <h2>Comienzos de su carrera</h2>
+                <img src="comienzos.jpg" alt="Kim en sus primeros años">
+                <p>Kim Ye-Ji comenzó su carrera deportiva a la edad de 18 años, participando en competencias locales y destacándose rápidamente por su técnica. Su enfoque y dedicación la llevaron a ganar su primer título importante a los 19 años, lo que le permitió acceder a entrenamientos de élite en centros de alto rendimiento.</p>
+                <button onclick="window.open('https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_Par%C3%ADs_2024')">Leer más</button>
+            </article>
+
+            <!-- Segundo paso: Ingreso a un equipo profesional -->
+            <article class="paso" id="paso2">
+                <h2>Ingreso a un equipo profesional</h2>
+                <img src="equipo.jpg" alt="Kim con su equipo profesional">
+                <p>A los 22 años, Kim fue reclutada por uno de los equipos profesionales más prestigiosos de su disciplina. En este equipo, perfeccionó sus habilidades técnicas y tácticas, participando en su primera competencia internacional a nivel mundial. Fue en este momento cuando su carrera despegó a nivel internacional.</p>
+                <button onclick="window.open('https://es.wikipedia.org/wiki/Campeonato_mundial_de_tiro')">Leer más</button>
+            </article>
+
+            <!-- Tercer paso: Competencias internacionales y logros -->
+            <article class="paso" id="paso3">
+                <h2>Competiciones Internacionales</h2>
+                <img src="competencias.jpg" alt="Kim en competiciones internacionales">
+                <p>Kim ha participado en varias competiciones internacionales, destacándose en campeonatos mundiales y torneos olímpicos. A lo largo de su carrera, ha logrado varias medallas de oro, plata y bronce, consolidándose como una de las principales atletas de su disciplina.</p>
+                <button onclick="window.open('https://es.wikipedia.org/wiki/Campeonato_Mundial_de_Tiro')">Leer más</button>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Yanina Lugo</p>
+        <p>Fecha de creación: Noviembre 2024</p>
+    </footer>
+
+    <script>
+        // Animación de desplazamiento suave utilizando ScrollReveal
+        ScrollReveal().reveal('.paso', {
+            duration: 1000,
+            distance: '50px',
+            origin: 'bottom',
+            opacity: 0,
+            easing: 'ease-out',
+            interval: 300 // Intervalo de animación para cada artículo
+        });
+    </script>
+
+</body>
+</html>
+
+
